@@ -1,0 +1,286 @@
+
+  
+  
+  
+  
+  
+  /* Genel stil ayarları */
+  * {
+    margin: 0 auto; /* Tüm öğelerin dış kenar boşluğunu ortalar */
+    padding: 0; /* Tüm öğelerin iç kenar boşluğunu sıfırlar */
+    list-style: none; /* Liste öğelerinin işaretlerini kaldırır */
+    text-decoration: none; /* Metin bağlantılarındaki alt çizgiyi kaldırır */
+    box-sizing: border-box; /* Kutunun içeriğini, kenarlığını ve dolgusunu, toplam genişlik ve yüksekliği hesaplar */
+    font-family: "Google Sans Regular"; /* Metin fontunu belirler */
+    scroll-behavior: smooth; /* Sayfada yumuşak kaydırma efekti sağlar */
+  }
+  
+  /* Body stil ayarları */
+  body {
+    display: flex; /* İçeriği yatay hizalar */
+    justify-content: center; /* İçeriği yatay eksende ortalar */
+    align-items: center; /* İçeriği dikey eksende ortalar */
+    min-height: 100vh; /* Minimum yükseklik belirler, tam pencere yüksekliği kadar genişler */
+    background: url("/Images/background.jpg") no-repeat; /* Arka plan resmi ekler ve tekrar etmesini engeller */
+    background-size: cover; /* Arka plan resminin ekran boyutuna uygun şekilde ölçeklenmesini sağlar */
+    background-position: center; /* Arka plan resminin ortalanmasını sağlar */
+  }
+  
+  /* Header stil ayarları */
+  header {
+    position: fixed; /* Sayfa kaydırıldığında sabit durmasını sağlar */
+    top: 0; /* Sayfanın üst kısmına yaslanır */
+    left: 0; /* Sayfanın sol kısmına yaslanır */
+    width: 100%; /* Tam genişlik alır */
+    height: 80px; /* Yükseklik belirler */
+    display: flex; /* İçeriği yatay hizalar */
+    align-items: center; /* İçeriği dikey eksende ortalar */
+    justify-content: space-between; /* Öğeler arasında boşluk bırakır */
+    padding: 0 100px; /* Sol ve sağ kenar boşluğunu belirler */
+  }
+  
+  /* Logo stil ayarları */
+  .logo {
+    font-size: 1.8em; /* Yazı tipi boyutu */
+    color: #fff; /* Metin rengi */
+    font-weight: bold; /* Metnin kalınlığını belirler */
+    user-select: none; /* Kullanıcı seçimini engeller */
+  }
+  
+  /* Navigasyon menüsü stil ayarları */
+  .nav-bar ul {
+    display: flex; /* Liste öğelerini yatay hizalar */
+  }
+  
+  .nav-bar ul li a {
+    position: relative; /* Göreceli konumlandırma sağlar */
+    border-radius: 50px; /* Kenar yuvarlanmasını sağlar */
+    display: block; /* Blok öğe olarak görüntüler */
+    font-size: 1.8em; /* Yazı tipi boyutu */
+    color: #fff; /* Metin rengi */
+    text-decoration: none; /* Metin bağlantılarının alt çizgisini kaldırır */
+    font-weight: 500; /* Metnin kalınlığını belirler */
+    margin-left: 20px; /* Sol kenar boşluğunu belirler */
+    padding: 0.5em; /* Dolgu miktarını belirler */
+    transition: 0.2s; /* Geçiş efekti süresini belirler */
+  }
+  
+  .nav-bar ul li a::after {
+    content: ''; /* Ek içerik ekler */
+    position: absolute; /* Mutlak konumlandırma sağlar */
+    left: 0; /* Sol kenara yaslanır */
+    bottom: -6px; /* Alt kenara yakın konumlandırılır */
+    width: 100%; /* Tam genişlik alır */
+    height: 3px; /* Yükseklik belirler */
+    background: #fff; /* Arkaplan rengi */
+    border-radius: 5px; /* Kenar yuvarlanmasını sağlar */
+    transform-origin: right; /* Dönüşün kaynağını belirler */
+    transform: scaleX(0); /* Ölçeklendirme işlemi uygular */
+    transition: transform .5s; /* Geçiş efekti süresini belirler */
+  }
+  
+  .nav-bar ul li a:hover::after {
+    transform: scaleX(1); /* Ölçeklendirme işlemi uygular */
+    transform-origin: left; /* Dönüşün kaynağını belirler */
+  }
+  
+  /* Giriş butonu stil ayarları */
+  .nav-bar .btn-login {
+    color: #333; /* Metin rengi */
+    background: #fff; /* Arkaplan rengi */
+  }
+  
+  .nav-bar .btn-login {
+    background: #fff; /* Arkaplan rengi */
+    color: #162938; /* Metin rengi */
+  }
+  
+  /* Wrapper stil ayarları */
+  .wrapper {
+    width: 420px; /* Genişlik */
+    background: transparent; /* Arkaplan rengi */
+    border: 2px solid rgba(255,255,255, .2); /* Kenar rengi ve kalınlığını belirler */
+    backdrop-filter: blur(8px); /* Arkaplanı bulanıklaştırır */
+    box-shadow: 0 0 10px rgba(0,0,0, .2); /* Kutuya gölge ekler */
+    color: #fff; /* Metin rengi */
+    border-radius: 10px; /* Kenar yuvarlanmasını sağlar */
+    padding: 30px 40px; /* Dolgu miktarını belirler */
+  }
+  
+  .wrapper h1 {
+    font-size: 36px; /* Yazı tipi boyutu */
+    text-align: center; /* Metni ortalar */
+  }
+  
+  .wrapper .input-box{
+    position: relative; /* Göreceli konumlandırma sağlar */
+    width: 100%; /* Tam genişlik alır */
+    height: 50px; /* Yükseklik belirler */
+    margin: 30px 0; /* Kenar boşluğunu belirler */
+  }
+  
+  .input-box input{
+    width: 100%; /* Tam genişlik alır */
+    height: 100%; /* Tam yükseklik alır */
+    background: transparent; /* Arkaplan rengi */
+    border: none; /* Kenar çizgisini kaldırır */
+    outline: none; /* Odaklanma efektini kaldırır */
+    border: 2px solid rgba(255,255,255, .2); /* Kenar rengi ve kalınlığını belirler */
+    border-radius: 40px; /* Kenar yuvarlanmasını sağlar */
+    font-size: 16px; /* Yazı tipi boyutu */
+    color: #fff; /* Metin rengi */
+    padding: 20px 45px 20px 20px; /* Dolgu miktarını belirler */
+  }
+  
+  .input-box input::placeholder{
+    color: #fff; /* Metin rengi */
+  }
+  
+  .input-box i{
+    position: absolute; /* Mutlak konumlandırma sağlar */
+    right: 20px; /* Sağ kenara yakın konumlandırılır */
+    top: 50%; /* Yatay eksende ortalar */
+    transform: translateY(-50%); /* Dikey eksende ortalar */
+    font-size: 20px; /* Yazı tipi boyutu */
+  }
+  
+  .wrapper .remember-forgot {
+    display: flex; /* İçeriği yatay hizalar */
+    justify-content: space-between; /* Öğeler arasında boşluk bırakır */
+    font-size: 14.5px; /* Yazı tipi boyutu */
+    margin: -15px 0 15px; /* Kenar boşluğunu belirler */
+  }
+  
+  .remember-forgot label input{
+    accent-color: #fff; /* Betik içeriği rengi */
+    margin-right: 3px; /* Sağ kenar boşluğunu belirler */
+  }
+  
+  .remember-forgot a {
+    color: #fff; /* Metin rengi */
+    text-decoration: none; /* Metin bağlantılarındaki alt çizgiyi kaldırır */
+  }
+  
+  .remember-forgot a:hover {
+    text-decoration: underline; /* Metin bağlantısının altını çizer */
+  }
+  
+  .wrapper .btn {
+    width: 100%; /* Tam genişlik alır */
+    height: 45px; /* Yükseklik belirler */
+    background: #fff; /* Arkaplan rengi */
+    border: none; /* Kenar çizgisini kaldırır */
+    outline: none; /* Odaklanma efektini kaldırır */
+    border-radius: 40px; /* Kenar yuvarlanmasını sağlar */
+    box-shadow: 0 0 10px rgba(0,0,0, .1); /* Kutuya gölge ekler */
+    cursor: pointer; /* Fare işaretçisini değiştirir */
+    font-size: 16px; /* Yazı tipi boyutu */
+    color: #333; /* Metin rengi */
+    font-weight: 600; /* Metnin kalınlığını belirler */
+  }
+  
+  .wrapper .register-link {
+    font-size: 14.5px; /* Yazı tipi boyutu */
+    text-align: center; /* Metni ortalar */
+    margin: 20px 0 15px; /* Kenar boşluğunu belirler */
+  }
+  
+  .register-link p a {
+    color: #fff; /* Metin rengi */
+    text-decoration: none; /* Metin bağlantılarındaki alt çizgiyi kaldırır */
+    font-weight: 600; /* Metnin kalınlığını belirler */
+  }
+  
+  .register-link p a:hover {
+    text-decoration: underline; /* Metin bağlantısının altını çizer */
+  }
+  
+  /* Ekran boyutları için medya sorguları */
+  @media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px; /* Sol ve sağ kenar boşluğunu belirler */
+    }
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    header {
+        padding: 0 30px; /* Sol ve sağ kenar boşluğunu belirler */
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .logo {
+        font-size: 1.3em; /* Yazı tipi boyutu */
+    }
+  
+    header{
+        flex-direction: column; /* Öğeleri dikey hizalar */
+        padding: 15px 0px; /* Kenar boşluğunu belirler */
+        overflow: hidden; /* Taşan içeriği gizler */
+        height: 110px; /* Yükseklik belirler */
+       
+        background: transparent;
+        backdrop-filter: blur(8px);
+        border: 0px solid rgba(255,255,255, .2);
+        box-shadow: 0 0 10px rgba(0,0,0, .2);
+        font-size: 0.9em; /* Yazı tipi boyutu */
+        border-radius: 10px; /* Kenar yuvarlanmasını sağlar */
+        color: white;
+    }
+  
+    .nav-bar .btn-login {
+        flex-direction: column; /* Öğeleri dikey hizalar */
+    }
+  
+    .harf-label {
+      font-size: 16px; /* Varsayılan font boyutu */
+      overflow: hidden; /* Harfleri gizle */
+  }
+  
+  .harf-label span {
+      display: inline-block;
+      opacity: 0; /* Harfleri saydam yap */
+      transition: opacity 0.5s ease; /* Animasyon geçiş süresi ve efekti */
+  }
+  
+  .harf-goster {
+      animation: goster 0.5s forwards; /* Animasyon süresi ve efekti */
+  }
+  
+  @keyframes goster {
+      from {
+          opacity: 0; /* Başlangıçta harfleri görünmez yap */
+      }
+      to {
+          opacity: 1; /* Sonunda harfleri görünür yap */
+      }
+  }
+
+  #ContactDiv{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  a,#link{
+    perspective: none;
+    
+    color: white;
+    transition: 0.3s;
+  }
+
+  #link:hover{
+    transform: perspective() rotateY(45deg);
+    margin-top: 13px;
+    font-size: 20px;
+    background: transparent; /* Arkaplan rengi */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Kenar rengi ve kalınlığını belirler */
+    backdrop-filter: blur(8px); /* Arkaplanı bulanıklaştırır */
+    box-shadow: 0 0 10px rgba(0,0,0, .2); /* Kutuya gölge ekler */
+    color: #fd9738; /* Metin rengi */
+    border-radius: 10px; /* Kenar yuvarlanmasını sağlar */
+  }
+  
+}
+  

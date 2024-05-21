@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta bilgileri -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Portfolyo, Mertcan, Stajyer, Github, Web, Authentication">
+    <meta name="description" content="PORTFOLYO | Mertcan">
+    <title>PORTFOLYO | Mertcan SURNAME</title>
+    <!-- CSS dosyalarının bağlantıları -->
+    <link rel="stylesheet" href="/Styles/index.css"/>
+    <link rel="stylesheet" href="/Styles/loader.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- JavaScript dosyasının bağlantısı -->
+    <script src="/Codes/code.js"></script>
+    <script src="/Codes/jquery.js"></script>
+    <script>
+         $(document).ready(function(){
+            $(".loader").fadeIn(1000, function() {
+                $(this).delay(1000).fadeOut(1000);
+            });
+         });
+    </script>
+</head>
+<body>
+
+
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <header>
+        <!-- Site logosu -->
+        <div class="logo">Mertcan</div>
+        <!-- Navigasyon menüsü -->
+        <nav class="nav-bar">
+            <ul>
+                <!-- Navigasyon öğeleri -->
+                <li>
+                    <a href="/Pages/index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="/Pages/about.html">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="/Pages/contact.html">Contact</a>
+                </li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <!-- Giriş formu -->
+        <form action="">
+            <h1>Login</h1>
+            <!-- Kullanıcı adı ve şifre girişi -->
+            <div class="input-box">
+                <input type="text" id="userName" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <!-- "Beni Hatırla" seçeneği ve şifremi unuttum bağlantısı -->
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <!-- Giriş butonu -->
+            <button type="submit" class="btn" onclick="girisKontrolu(document.getElementById('userName').value, document.getElementById('password').value)">Login</button>
+            <!-- Kayıt ol bağlantısı -->
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

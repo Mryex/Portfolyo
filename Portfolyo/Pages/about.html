@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta bilgileri -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Portfolyo, Mertcan, Stajyer, Github, Web, Authentication">
+    <meta name="description" content="PORTFOLYO | Mertcan SURNAME">
+    <title>PORTFOLYO | ABOUT</title>
+    <!-- CSS dosyalarının bağlantıları -->
+    <link rel="stylesheet" href="/Styles/index.css"/>
+    <link rel="stylesheet" href="/Styles/loader.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- JavaScript dosyasının bağlantısı -->
+    <script src="/Codes/jquery.js"></script>
+    <script src="/Codes/code.js"></script>
+    
+
+    <script>
+        $(document).ready(function(){
+            $(".loader").fadeIn(1000, function() {
+                $(this).delay(1000).fadeOut(1000);
+            });
+            var harfLabel = $('.harf-label');
+
+            // Harf etiketinin içeriğini al
+            var metin = harfLabel.text().trim();
+            harfLabel.empty(); // Etiketin içeriğini temizle
+            harfLabel.css({'color':'white','transition':'0.3ms','opacity':'0.9'})
+            // Her bir harf için işlemi gerçekleştir
+            for (var i = 0; i < metin.length; i++) {
+               
+                // Her bir harfi span içine alarak etikete ekle
+                var span = $('<label>' +''+ metin[i] +''+ '</label>').css('opacity', 0);
+                harfLabel.append(span);
+
+                // Her bir harfi göstermek için gecikmeli bir animasyon uygula
+                span.delay(100 * i).animate({opacity: 1}, 500);
+            }
+                    
+                        
+
+            });
+    </script>
+</head>
+<body>
+
+
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <header>
+
+
+        <!-- Site logosu -->
+        <div class="logo">Mertcan SURNAME </div>
+        <!-- Navigasyon menüsü -->
+        <nav class="nav-bar">
+            <ul>
+                <!-- Navigasyon öğeleri -->
+                <li>
+                    <a href="/Pages/index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="/Pages/about.html">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="/Pages/contact.html">Contact</a>
+                </li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <!-- Giriş formu -->
+        <h1>About</h1>
+            <br>
+           <label class="harf-label">Hello, my name is Mertcan. I'm a 11th grade computer science student at Profilo Vocational and Technical Anatolian High School. I believe I am talented in my field, and I write websites. In addition to that, I have been writing games in Lua for 4 years.</label>
+            
+    </div>
+
+</body>
+</html>
